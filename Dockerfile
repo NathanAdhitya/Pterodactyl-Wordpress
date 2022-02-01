@@ -35,7 +35,7 @@ RUN apk --no-cache add \
 # Create symlink so programs depending on `php` still function
 RUN ln -s /usr/bin/php8 /usr/bin/php
 
-COPY config/php.ini /etc/php8/conf.d/zzz_custom.ini
+COPY php-fpm/php.ini /etc/php8/conf.d/zzz_custom.ini
 
 USER container
 ENV  USER container
