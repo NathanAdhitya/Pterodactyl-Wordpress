@@ -25,6 +25,7 @@ RUN apk --no-cache add \
   php8-zip \
   php8-opcache \
   php8-iconv \
+  php8-pecl-imagick \
   nginx \
   supervisor \
   curl \
@@ -35,6 +36,7 @@ RUN apk --no-cache add \
 RUN ln -s /usr/bin/php8 /usr/bin/php
 
 COPY php-fpm/php.ini /etc/php8/conf.d/zzz_custom.ini
+COPY php-fpm/imagick-policies.xml /etc/ImageMagick-7/policy.xml
 
 USER container
 ENV  USER container
