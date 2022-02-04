@@ -56,7 +56,7 @@
     <policy domain="coder" rights="read|write" pattern="{GIF,JPEG,PNG,WEBP}" />
 -->
 <policymap>
-  <!-- <policy domain="resource" name="temporary-path" value="/tmp"/> -->
+  <policy domain="resource" name="temporary-path" value="/home/container/temp-imagick/"/>
   <policy domain="resource" name="memory" value="512MiB"/>
   <policy domain="resource" name="map" value="512MiB"/>
   <!-- <policy domain="resource" name="width" value="10KP"/> -->
